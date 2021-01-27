@@ -53,7 +53,7 @@ final class UIViewController_UILabelSpec: QuickSpec {
                 }
             }
 
-            fcontext("when a UILabel is not displayed to the user") {
+            context("when a UILabel is not displayed to the user") {
                 var viewController: UIViewController!
 
                 beforeEach {

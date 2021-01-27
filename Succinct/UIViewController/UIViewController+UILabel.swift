@@ -78,7 +78,7 @@ extension UIViewController {
     ///
     @objc public func findLabel(withExactText searchText: String) -> UILabel? {
         if let labelInRootView = view.findLabel(withExactText: searchText) {
-            return labelInRootView
+            return labelInRootView.isHidden ? nil : labelInRootView
         }
 
         if let titleView = navigationItem.titleView, let label = titleView.findLabel(withExactText: searchText) {
