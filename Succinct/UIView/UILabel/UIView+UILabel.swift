@@ -1,7 +1,7 @@
 // MARK: - Has UILabels
 extension UIView {
     ///
-    /// Searches the entire view hierarchy of the current view for a UILabel whose text matches the searchText exactly.
+    /// Searches the entire view hierarchy of the current view for a visible UILabel whose text matches the searchText exactly.
     ///
     /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
     ///
@@ -13,7 +13,7 @@ extension UIView {
     }
 
     ///
-    /// Searches the entire view hierarchy of the current view for a UILabel whose text contains the searchText.
+    /// Searches the entire view hierarchy of the current view for a visible UILabel whose text contains the searchText.
     ///
     /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
     ///
@@ -28,7 +28,7 @@ extension UIView {
 // MARK: - Finding UILabels
 extension UIView {
     ///
-    /// Searches the entire view hierarchy of the current view for a UILabel whose text matches the searchText exactly.
+    /// Searches the entire view hierarchy of the current view for a visible UILabel whose text matches the searchText exactly.
     ///
     /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
     ///
@@ -42,7 +42,7 @@ extension UIView {
     }
 
     ///
-    /// Searches the entire view hierarchy of the current view for a UILabel whose text contains the searchText.
+    /// Searches the entire view hierarchy of the current view for a visible UILabel whose text contains the searchText.
     ///
     /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
     ///

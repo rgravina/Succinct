@@ -16,6 +16,10 @@ internal extension UIView {
             return .failure(IsLabelWithExactTextResultType.matchFailed(searchText: searchText, actualText: labelText))
         }
 
+        guard label.isVisible else {
+            return .failure(IsLabelWithExactTextResultType.hidden)
+        }
+
         return .success(IsLabelWithExactTextResultType.found)
     }
 }
@@ -25,6 +29,7 @@ internal enum IsLabelWithExactTextResultType: EvaluationResultType {
     case wrongType
     case noText(searchText: String)
     case matchFailed(searchText: String, actualText: String)
+    case hidden
 
     var evaluatedMethod: String {
         get {

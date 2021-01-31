@@ -64,7 +64,7 @@ extension UIViewController {
 // MARK: - Find UILabel
 extension UIViewController {
     ///
-    /// Searches the entire view hierarchy of a view controller's primary view for a UILabel whose text matches the searchText exactly.
+    /// Searches the entire view hierarchy of a view controller's primary view for a visble UILabel whose text matches the searchText exactly.
     ///
     /// In addition to the view hierarchy, the following locations are also searched:
     /// - The navigation item's title view hierarchy
@@ -78,7 +78,7 @@ extension UIViewController {
     ///
     @objc public func findLabel(withExactText searchText: String) -> UILabel? {
         if let labelInRootView = view.findLabel(withExactText: searchText) {
-            return labelInRootView.isHidden ? nil : labelInRootView
+            return labelInRootView
         }
 
         if let titleView = navigationItem.titleView, let label = titleView.findLabel(withExactText: searchText) {
