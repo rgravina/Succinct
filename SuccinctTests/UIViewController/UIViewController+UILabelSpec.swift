@@ -86,6 +86,24 @@ final class UIViewController_UILabelSpec: QuickSpec {
                 }
             }
 
+            context("when a UILabel exists in the second subview but its parent is hidden") {
+                it("cannot find the label because its parent is hidden") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UIViewBuilder()
+                                .withSubview(
+                                    UILabelBuilder().withTitleText("Username").build()
+                                )
+                                .isHidden()
+                                .build()
+                        )
+                        .build()
+
+
+                    expect(viewController.findLabel(withExactText: "Username")).to(beNil())
+                }
+            }
+
             context("when a UILabel exists as a tableview cell") {
                 it("can find a label in the first table view cell whose text matches exactly") {
                     let viewController = UIViewControllerBuilder()

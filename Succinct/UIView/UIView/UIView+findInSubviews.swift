@@ -5,6 +5,10 @@ extension UIView {
     ) -> UIView? {
         viewHierarchyLogger.logEnterParentView(self)
 
+        guard isVisible else {
+            return nil
+        }
+
         if let view = isTableView(thatSatisfiesCondition: condition) {
             return view
         }

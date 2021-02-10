@@ -31,6 +31,11 @@ struct UIViewBuilder {
         return self
     }
 
+    func isHidden() -> UIViewBuilder {
+        view.isHidden = true
+        return self
+    }
+
     func build() -> UIView {
         return view
     }
